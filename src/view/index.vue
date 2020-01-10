@@ -11,7 +11,7 @@
     </div>
     <div class="bodyer" v-if="bbsdata.length!==0">
       <ul>
-        <li v-for="item in bbsdata">
+        <li v-for="(index,item) in bbsdata" :key="index">
           <span class="avatar_url" @click="loginname(item.author.loginname)"><img :src="item.author.avatar_url"></span>
           <span class="loginname" @click="loginname(item.author.loginname)">{{item.author.loginname}}</span>
           <span class="tab">【{{item.tab | tab_string}}】</span>
