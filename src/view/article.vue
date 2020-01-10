@@ -2,7 +2,7 @@
   <div>
       <div class="recent">
         <ul>
-          <li v-for="(item,index) in userdata.recent_topics" :key="index">
+          <li v-for="(index,item) in userdata.recent_topics" :key="index">
             <span class="avatar_url"><img :src="item.author.avatar_url" alt=""></span>
             <span class="loginname"> {{item.author.loginname}}</span><br>
             <span class="title"  >{{item.title}}</span><br>
